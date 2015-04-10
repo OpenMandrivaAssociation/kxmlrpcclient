@@ -28,12 +28,25 @@ Digest authentication, call setDigestAuthEnabled(true).
 
 #----------------------------------------------------------------------------
 
+%package i18n
+Summary:	KXmlRpcClient translations
+Group:		System/Internationalization
+BuildArch:	noarch
+
+%description i18n
+KXmlRpcClient translations.
+
+%files i18n -f libkxmlrpcclient5.lang
+
+#----------------------------------------------------------------------------
+
 %define kf5xmlrpcclient_major 5
 %define libkf5xmlrpcclient %mklibname kf5xmlrpcclient %{kf5xmlrpcclient_major}
 
 %package -n %{libkf5xmlrpcclient}
 Summary:	KDE Frameworks 5 XMLRPC services interaction shared library
 Group:		System/Libraries
+Requires:	%{name}-i18n
 
 %description -n %{libkf5xmlrpcclient}
 KDE Frameworks 5 XMLRPC services interaction shared library.
@@ -75,3 +88,4 @@ based on %{name}.
 %install
 %makeinstall_std -C build
 
+%find_lang libkxmlrpcclient5
