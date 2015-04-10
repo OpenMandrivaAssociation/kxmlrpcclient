@@ -9,6 +9,7 @@ Group:		Graphical desktop/KDE
 Url:		https://www.kde.org/
 Source0:	ftp://ftp.kde.org/pub/kde/stable/frameworks/%{fw_version}/%{name}-%{version}.tar.xz
 BuildRequires:	extra-cmake-modules
+BuildRequires:	kf5i18n-devel >= %{version}
 BuildRequires:	kf5kio-devel >= %{version}
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Test)
