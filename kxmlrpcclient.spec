@@ -28,18 +28,31 @@ Digest authentication, call setDigestAuthEnabled(true).
 
 #----------------------------------------------------------------------------
 
+%package i18n
+Summary:	KXmlRpcClient translations
+Group:		System/Internationalization
+BuildArch:	noarch
+
+%description i18n
+KXmlRpcClient translations.
+
+%files i18n -f libkxmlrpcclient5.lang
+
+#----------------------------------------------------------------------------
+
 %define KF5XmlRpcClient_major 5
 %define libKF5XmlRpcClient %mklibname KF5XmlRpcClient %{KF5XmlRpcClient_major}
 
 %package -n %{libKF5XmlRpcClient}
 Summary:	KDE Frameworks 5 XMLRPC services interaction shared library
 Group:		System/Libraries
+Requires:	%{name}-i18n
 
 %description -n %{libKF5XmlRpcClient}
 KDE Frameworks 5 XMLRPC services interaction shared library.
 
 %files -n %{libKF5XmlRpcClient}
-%{_kde5_libdir}/libKF5XmlRpcClient.so.%{KF5XmlRpcClient_major}*
+%{_libdir}/libKF5XmlRpcClient.so.%{KF5XmlRpcClient_major}*
 
 #----------------------------------------------------------------------------
 
@@ -73,3 +86,4 @@ based on %{name}.
 %install
 %ninja_install -C build
 
+%find_lang libkxmlrpcclient5
