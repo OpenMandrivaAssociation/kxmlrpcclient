@@ -28,40 +28,38 @@ Digest authentication, call setDigestAuthEnabled(true).
 
 #----------------------------------------------------------------------------
 
-%define kf5xmlrpcclient_major 5
-%define libkf5xmlrpcclient %mklibname kf5xmlrpcclient %{kf5xmlrpcclient_major}
+%define KF5XmlRpcClient_major 5
+%define libKF5XmlRpcClient %mklibname KF5XmlRpcClient %{KF5XmlRpcClient_major}
 
-%package -n %{libkf5xmlrpcclient}
+%package -n %{libKF5XmlRpcClient}
 Summary:	KDE Frameworks 5 XMLRPC services interaction shared library
 Group:		System/Libraries
 
-%description -n %{libkf5xmlrpcclient}
+%description -n %{libKF5XmlRpcClient}
 KDE Frameworks 5 XMLRPC services interaction shared library.
 
-%files -n %{libkf5xmlrpcclient}
-%{_kde5_libdir}/libKF5XmlRpcClient.so.%{kf5xmlrpcclient_major}*
+%files -n %{libKF5XmlRpcClient}
+%{_kde5_libdir}/libKF5XmlRpcClient.so.%{KF5XmlRpcClient_major}*
 
 #----------------------------------------------------------------------------
 
-%define devkf5xmlrpcclient %mklibname kf5xmlrpcclient -d
+%define devKF5XmlRpcClient %mklibname KF5XmlRpcClient -d
 
-%package -n %{devkf5xmlrpcclient}
+%package -n %{devKF5XmlRpcClient}
 Summary:	Development files for KDE Frameworks 5 XMLRPC services interaction module
 Group:		Development/KDE and Qt
-Requires:	%{libkf5xmlrpcclient} = %{EVRD}
-Provides:	%{name}-devel = %{EVRD}
-Provides:	kf5xmlrpcclient-devel = %{version}
+Requires:	%{libKF5XmlRpcClient} = %{EVRD}
 
-%description -n %{devkf5xmlrpcclient}
+%description -n %{devKF5XmlRpcClient}
 This package contains header files needed if you wish to build applications
 based on %{name}.
 
-%files -n %{devkf5xmlrpcclient}
-%{_kde5_includedir}/KF5/KXmlRpcClient
-%{_kde5_includedir}/KF5/kxmlrpcclient_version.h
-%{_kde5_libdir}/cmake/KF5XmlRpcClient
-%{_kde5_libdir}/libKF5XmlRpcClient.so
-%{_kde5_mkspecsdir}/*.pri
+%files -n %{devKF5XmlRpcClient}
+%{_includedir}/KF5/KXmlRpcClient
+%{_includedir}/KF5/kxmlrpcclient_version.h
+%{_libdir}/cmake/KF5XmlRpcClient
+%{_libdir}/libKF5XmlRpcClient.so
+%{_libdir}/qt5/mkspecs/modules/qt_KXmlRpcClient.pri
 
 #----------------------------------------------------------------------------
 
