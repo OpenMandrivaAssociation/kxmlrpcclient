@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kxmlrpcclient-5.13.0.tar.xz: 7bd8ab8268ae0cfea6ef06b17bc21167016728cf
+sources:
+  kxmlrpcclient-5.14.0.tar.xz: 9306eec73b7305811b60cfab5a6106cfd21c743f
