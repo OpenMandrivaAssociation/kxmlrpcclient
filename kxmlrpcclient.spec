@@ -13,6 +13,7 @@ BuildRequires:	cmake(KF5KIO)
 BuildRequires:	cmake(KF5I18n)
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Test)
+BuildRequires:	pkgconfig(Qt5Concurrent)
 
 %description
 KDE Frameworks 5 XMLRPC services interaction module.
