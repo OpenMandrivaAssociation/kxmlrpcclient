@@ -2,7 +2,7 @@
 
 Summary:	KDE Frameworks 5 XMLRPC services interaction module
 Name:		kxmlrpcclient
-Version:	5.48.0
+Version:	5.49.0
 Release:	1
 License:	BSD
 Group:		Graphical desktop/KDE
