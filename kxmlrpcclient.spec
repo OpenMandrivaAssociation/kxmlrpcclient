@@ -2,8 +2,8 @@
 
 Summary:	KDE Frameworks 5 XMLRPC services interaction module
 Name:		kxmlrpcclient
-Version:	5.56.0
-Release:	2
+Version:	5.57.0
+Release:	1
 License:	BSD
 Group:		Graphical desktop/KDE
 Url:		https://www.kde.org/
@@ -14,6 +14,8 @@ BuildRequires:	cmake(KF5I18n)
 BuildRequires:	pkgconfig(Qt5Core)
 BuildRequires:	pkgconfig(Qt5Test)
 BuildRequires:	pkgconfig(Qt5Concurrent)
+# For QCH format docs
+BuildRequires: qt5-assistant
 
 %description
 KDE Frameworks 5 XMLRPC services interaction module.
@@ -76,6 +78,18 @@ based on %{name}.
 %{_libdir}/cmake/KF5XmlRpcClient
 %{_libdir}/libKF5XmlRpcClient.so
 %{_libdir}/qt5/mkspecs/modules/qt_KXmlRpcClient.pri
+
+#----------------------------------------------------------------------------
+%package -n %{name}-devel-docs
+Summary: Developer documentation for %{name} for use with Qt Assistant
+Group: Documentation
+Suggests: %{devKF5XmlRpcClient} = %{EVRD}
+
+%description -n %{name}-devel-docs
+Developer documentation for %{name} for use with Qt Assistant
+
+%files -n %{name}-devel-docs
+%{_docdir}/qt5/*.{tags,qch}
 
 #----------------------------------------------------------------------------
 
