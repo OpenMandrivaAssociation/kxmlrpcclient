@@ -16,6 +16,7 @@ BuildRequires:	pkgconfig(Qt5Test)
 BuildRequires:	pkgconfig(Qt5Concurrent)
 # For QCH format docs
 BuildRequires: qt5-assistant
+BuildRequires: doxygen
 
 %description
 KDE Frameworks 5 XMLRPC services interaction module.
