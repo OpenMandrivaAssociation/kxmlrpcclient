@@ -2,12 +2,12 @@
 
 Summary:	KDE Frameworks 5 XMLRPC services interaction module
 Name:		kxmlrpcclient
-Version:	5.70.0
+Version:	5.72.0
 Release:	1
 License:	BSD
 Group:		Graphical desktop/KDE
 Url:		https://www.kde.org/
-Source0:	http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/frameworks/%(echo %{version} |cut -d. -f1-2)/portingAids/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(KF5KIO)
 BuildRequires:	cmake(KF5I18n)
